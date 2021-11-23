@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container nav-container">
+        <nav class="main-nav main-nav--closed">
+            <div class="main-nav--wrapper">
+                <button class="main-nav__toggle " type="button"></button>
+            </div>
+            <p class="main-nav--title-mobile">AJP</p>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">
+                    <img class="logo" src="img/logo.jpg" alt="Логотип AJR" width="60" height="60">
+                </a></li>
+                <li class="nav-item"><a href="#">Услуги</a></li>
+                <li class="nav-item"><a href="auction.html">Онлайн сервисы</a>
+                    <ul class="subnav-menu">
+                        <li class="subnav-item"><a href="auction.html">Калькулятор авто под полную пошлину</a></li>
+                        <li class="subnav-item"><a href="auction.html">Калькулятор распилов и конструкторов</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">О компании</a></li>
+                <li class="nav-item"><a href="#">Отзывы</a></li>
+                <li class="nav-item"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="nav-number_block">
+                <p class="nav-number"> <a href="tel:84212477767">8(4212) 47-77-67</a></p>
+
+                <p class="nav-subnumber">Контактный телефон</p>
+            </div>
+            <div class="nav-ask">
+                <a class="ask-button" href="#">Задать вопрос</a> 
+             </div>
+        </nav>
+    </div>
+    <div class="container auc-wrapper">
+        <iframe  id="iframe" class="auc-frame" src="https://jpcenter.ru/" frameborder="0" scrolling="yes"></iframe>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-left">
+                <p class="footer--offer">Сайт не является публичной офертой</p>
+            </div>
+            <div class="footer-center">
+                <h2>Мы в социальных сетях</h2>
+                <div class="footer--link-list">
+                    <a href="https://www.instagram.com/ajp_auction/">
+                        <img src="img/instagram.svg" width="30" height="30" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Разработчик: Александр Дергунов</p>
+            </div>
+        </div>
+    </footer>
+      
+    <section class="modal modal--ask">
+        <h2 class="title">Задать вопрос</h2>
+        <p class="modal--subtitle">Пожалуйста, заполните представленные ниже поля</p>
+        <form class="form" method="POST" action="validation-form/auth.php">
+            <p>
+                <label class="visually-hidden" for="ask--name">Ваше имя</label>
+                <input class="ask--name" id="ask--name" type="text" name="username" placeholder="Иванов Иван">
+            </p>
+            <p>
+                <label class="visually-hidden" for="ask--email">Ваша почта</label>
+                <input class="ask--email" id="ask--email" type="email" name="email" placeholder=example@email.ru>
+            </p>
+            <p>
+                <label class="visually-hidden" for="ask--phone">Ваш телефон</label>
+                <input class="ask--phone" id="ask--phone" type="tel" name="tel" placeholder=8(234)234-2345>
+            </p>
+            <p>
+                <label class="visually-hidden" for="ask--email">Ваш вопрос</label>
+                <textarea name="text" id="ask--text" cols="30" rows="10" placeholder="Введите ваш вопрос"></textarea>
+            </p>
+            <button class="button">Отправить</button>
+        </form>
+        <button class="modal--close">Закрыть</button>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
