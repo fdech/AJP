@@ -1,0 +1,349 @@
+/* media */
+
+@media (max-width: 430px) {
+    * {
+        box-sizing: border-box;
+    }
+    .container {
+        width: 100%;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+
+    .main-nav {
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(246, 255, 125, 0.911);
+        border-radius: 0px;
+    }
+
+    .img-full {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    /* adaptive-menu */
+
+    .main-nav--title-mobile {
+        display: block;
+        text-align: center;
+
+    }
+	.main-nav--title-mobile a {
+		font-size: inherit;
+	}
+	
+    .main-nav__toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 70px;
+        height: 50px;
+        background-color: var(--style-color);
+        cursor: pointer;
+        border: none;
+
+    }
+    .main-nav__toggle:hover,
+    .main-nav__toggle:active {
+        background-color: var(--style-color-hover);
+    }
+
+    .main-nav--closed .main-nav__toggle::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 17px;
+        width: 36px;
+        height: 2px;
+        background-color: #ffffff;
+        box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+    }
+    
+    .main-nav--closed .main-nav__toggle:active::before {
+        background-color:rgba(255, 255, 255, 0.3);
+        box-shadow:
+        0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+    }
+
+    .main-nav--opened .main-nav__toggle {
+        top: 0;
+        right: auto;
+        left: 0;
+    }
+    .main-nav--opened .main-nav__toggle::before,
+    .main-nav--opened .main-nav__toggle::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 18px;
+        width: 36px;
+        height: 2px;
+        background-color: #ffffff;
+    }
+
+    .main-nav--opened .main-nav__toggle::before{
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    .main-nav--opened .main-nav__toggle::after {
+        transform: rotate(-45deg);
+    }
+
+    .main-nav--opened .main-nav__toggle:active::before,
+    .main-nav--opened .main-nav__toggle:active::after{
+        background-color: fade(#ffffff, 30%);
+    }
+
+    .nav-item a {
+        display: block;
+        padding: 12px 21px;
+        padding-bottom: 13px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .main-nav--closed .nav-list {
+        display: none;
+      }
+      
+      .main-nav--closed .nav-number_block,
+      .main-nav--closed .nav-ask {
+        display: none;
+      }
+
+      .nav-number_block,
+      .nav-ask {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .nav-ask {
+          margin-bottom: 20px;
+      }
+    /* adaptive-menu end */
+    .nav-list{
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    /* slider */
+    .swiper-button-prev, .swiper-button-next {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+      }
+      
+    .slider-title {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .slider-subtitle {
+        font-size: 24px;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0, 100%);
+    }
+    .main-slider {
+        padding-left: 5px;
+    }
+    .slider-item {
+        width: 350px;
+        /* background-color: #fff;
+        border-radius: 0; */
+    }
+    /* slider end */
+
+    .delivery {
+        margin-top: 20px;
+    }
+
+    .delivery-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .delivery-item {
+        margin-bottom: 20px;
+    }
+
+    .car-example-list {
+        grid-template-columns: 1fr;
+    }
+
+    .car-example-item{
+        width: 290px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .advantages {
+        
+    }
+
+    .advantages-item--title{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .advantages-item{
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+    }
+    
+
+    .advantages-wrapper {
+        background-image: none;
+        padding: 0;
+    }
+
+    .advantages-list--left .advantages-item--title{
+        border-radius: 0;
+    }
+
+    .advantages-list--left {
+        margin-right: 10px;
+    }
+
+    .advantages-list--right .advantages-item--title {
+        border-radius: 0;
+        padding-left: 10px;
+    }
+
+    .advantages-item--title h3 {
+        font-size: 18px;
+    }
+    
+    .advantages-item h3 {
+        font-size: 16px;
+    }
+
+    .advantages-item p{
+        font-size: 12px;
+    }
+
+    
+    .comeback {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .comeback-slider {
+        overflow: hidden;
+    }
+
+    .comeback-slider-item {
+        padding: 20px;
+        width: 330px;
+    }
+
+    .main-faq--title-wrapper {
+        flex-direction: column;
+    }
+    .footer-wrapper {
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-center {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .modal--ask {
+        width: 90%;
+        top: 10px;
+
+        padding: 30px 40px;
+        overflow: scroll;
+    }
+
+    .form input, .form textarea {
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .form textarea{
+        height: 100px;
+    }
+    .modal--subtitle {
+        font-size: 14px;
+    }
+    .auc-wrapper {
+        min-height: 700px;
+    }
+
+    .auc-frame {
+        height: 100vh;
+        margin-top: 0;
+    }
+    .auc-wrapper::before{
+        top: 0;
+    }
+
+    /* about */
+    .about {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .about--wrapper {
+        padding: 20px 0;
+    }
+
+    .about--text-wrapper {
+        padding: 0;
+    }
+
+    .feedback-form {
+        margin-bottom: 20px;
+    }
+
+    .feedback-form .form{
+        display: block;
+    }
+	
+	.feedback-form .wpcf7-form {
+		display: block;
+	}
+
+    /* contacts */
+    .contacts--wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts--map iframe {
+        width: 100%;
+        height: 300px;
+    }
+	
+/* 	catalog */
+	.cars--item {
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+		padding: 10px;
+	}
+	
+	.cars--column{
+		padding: 10px;
+	}
+	
+	.cars--img-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	.cars--title{
+		font-size: 22px;
+	}
+	
+	.cars--subtitle {
+		font-size: 16px;
+	}
+}
